@@ -72,6 +72,7 @@ public class EnemyHealth : MonoBehaviour
     {
         // Turn off the nav mesh for the dead enemy instance
         GetComponent <UnityEngine.AI.NavMeshAgent> ().enabled = false;
+        
         // Change rb to kinematic so the enemy model won't be seen as a change
         // to your environment as it sinks below 0 on the Y
         GetComponent <Rigidbody> ().isKinematic = true;
