@@ -6,7 +6,9 @@ A 3D isometric shooter game created with Unity and C# via the tutorial on Unity'
 
 ### Custom Code  
 
-The tutorial showed how to instantiate enemies from three points, a different enemy(class) at each point.  I added some code to allow all enemies to be created randomly at all the spawn points.
+ - The tutorial showed how to instantiate enemies from three points with a different enemy(class) at each point.  I added some code to allow all enemies to be created randomly at all the spawn points.
+ 
+ - I added code and animated text so the player could play again.
 
 This repo only includes the code required for this project.  
 
