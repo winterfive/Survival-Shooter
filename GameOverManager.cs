@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class GameOverManager : MonoBehaviour
 
 
     Animator anim;
+    bool isPlayable = false;
 
 
     void Awake()
@@ -19,6 +21,17 @@ public class GameOverManager : MonoBehaviour
         if (playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger("GameOver");
+            // Set isPlayable to true
+            isPlayable = true;
+            RestartLevel();
+        }
+    }
+
+    public void RestartLevel()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && isPlayable)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
